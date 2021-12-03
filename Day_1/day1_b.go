@@ -27,13 +27,13 @@ func main() {
 	}
 
 	l := 0
-	max_sum, temp := values[0]+values[1]+values[2], 0
+	max_sum, temp := 0, 0
 	result := 0
 
 	for index, val := range values {
 		temp += val
 		if index-l+1 == 3 {
-			if temp > max_sum {
+			if temp > max_sum && l != 0 {
 				result++
 			}
 			max_sum = temp
